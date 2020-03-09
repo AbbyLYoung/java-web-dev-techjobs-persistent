@@ -1,21 +1,23 @@
 package org.launchcode.javawebdevtechjobspersistent.models;
 
 import javax.persistence.Entity;
+import javax.validation.constraints.NotBlank;
 
 @Entity
 public class Skill extends AbstractEntity {
 
-    private String additionalSkillDescription;
-
     public Skill(){
-
     }
 
-    public String getAdditionalSkillDescription() {
-        return additionalSkillDescription;
+    @NotBlank
+    private String description;
+
+
+    public String getDescription() {
+        return description;
     }
 
-    public void setAdditionalSkillDescription(String additionalSkillDiscription) {
-        this.additionalSkillDescription = additionalSkillDiscription;
+    public void setDescription(String description) {
+        this.description = description;
     }
 }
