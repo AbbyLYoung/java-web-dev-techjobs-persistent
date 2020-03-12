@@ -10,5 +10,6 @@ FROM employer
 WHERE Location="St. Louis City";
 
 ## Part 3: Test it with SQL
-
+drop table job;
 ## Part 4: Test it with SQL
+SELECT name, description FROM skill WHERE id in (SELECT skills_id FROM job_skills WHERE skills_id is not null)
